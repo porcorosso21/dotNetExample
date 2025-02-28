@@ -29,7 +29,7 @@ namespace dotNetExample
             //取得Example資料夾內所有Form
             Type[] types = Assembly.GetExecutingAssembly().GetTypes();
             String namePpace = String.Format("{0}.Example", Assembly.GetExecutingAssembly().GetName().Name);
-            List<Type> typeList = types.Where(t => t.BaseType.Name == nameof(Form) && t.Namespace.Contains(namePpace)).ToList();
+            List<Type> typeList = types.Where(t => t.BaseType.Name == nameof(Form) && t.Namespace.Contains(namePpace)).OrderBy(o => o.Namespace).ToList();
             foreach (Type t in typeList)
             {
                 Form f = (Form)Activator.CreateInstance(t);
