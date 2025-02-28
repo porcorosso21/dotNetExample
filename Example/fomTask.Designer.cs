@@ -68,7 +68,7 @@
             this.Controls.Add(this.rtbTask2);
             this.Controls.Add(this.rtbTask1);
             this.Name = "fomTask";
-            this.Text = "Task Example";
+            this.Text = "Task";
             this.ResumeLayout(false);
 
         }
