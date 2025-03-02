@@ -42,6 +42,9 @@
             this.btnSerialize3 = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.tbJson4 = new System.Windows.Forms.TextBox();
+            this.btnDeserialize4 = new System.Windows.Forms.Button();
+            this.btnSerialize4 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -136,6 +139,7 @@
             // 
             this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox3.Controls.Add(this.label1);
             this.groupBox3.Controls.Add(this.tbJson3);
             this.groupBox3.Controls.Add(this.btnDeserialize3);
             this.groupBox3.Controls.Add(this.btnSerialize3);
@@ -178,7 +182,9 @@
             // 
             this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox4.Controls.Add(this.label1);
+            this.groupBox4.Controls.Add(this.tbJson4);
+            this.groupBox4.Controls.Add(this.btnDeserialize4);
+            this.groupBox4.Controls.Add(this.btnSerialize4);
             this.groupBox4.Location = new System.Drawing.Point(12, 393);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(522, 120);
@@ -189,11 +195,39 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 28);
+            this.label1.Location = new System.Drawing.Point(148, 8);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(174, 36);
             this.label1.TabIndex = 0;
             this.label1.Text = ".NET Standard 2.0 及更新版本\r\n.NET framework 4.6.2 及更新版本\r\n.NET Core 2.0、2.1 與 2.2";
+            // 
+            // tbJson4
+            // 
+            this.tbJson4.Location = new System.Drawing.Point(13, 50);
+            this.tbJson4.Multiline = true;
+            this.tbJson4.Name = "tbJson4";
+            this.tbJson4.Size = new System.Drawing.Size(498, 51);
+            this.tbJson4.TabIndex = 4;
+            // 
+            // btnDeserialize4
+            // 
+            this.btnDeserialize4.Location = new System.Drawing.Point(436, 21);
+            this.btnDeserialize4.Name = "btnDeserialize4";
+            this.btnDeserialize4.Size = new System.Drawing.Size(75, 23);
+            this.btnDeserialize4.TabIndex = 2;
+            this.btnDeserialize4.Text = "Deserialize";
+            this.btnDeserialize4.UseVisualStyleBackColor = true;
+            this.btnDeserialize4.Click += new System.EventHandler(this.btnDeserialize4_Click);
+            // 
+            // btnSerialize4
+            // 
+            this.btnSerialize4.Location = new System.Drawing.Point(12, 20);
+            this.btnSerialize4.Name = "btnSerialize4";
+            this.btnSerialize4.Size = new System.Drawing.Size(75, 23);
+            this.btnSerialize4.TabIndex = 3;
+            this.btnSerialize4.Text = "Serialize";
+            this.btnSerialize4.UseVisualStyleBackColor = true;
+            this.btnSerialize4.Click += new System.EventHandler(this.btnSerialize4_Click);
             // 
             // fomJSON
             // 
@@ -234,5 +268,8 @@
         private System.Windows.Forms.Button btnSerialize3;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox tbJson4;
+        private System.Windows.Forms.Button btnDeserialize4;
+        private System.Windows.Forms.Button btnSerialize4;
     }
 }
