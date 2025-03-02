@@ -13,6 +13,7 @@ using System.Web.Script.Serialization;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Json;
 using Newtonsoft.Json;
+using System.Text.Json;
 
 namespace dotNetExample.Example
 {
@@ -108,6 +109,24 @@ namespace dotNetExample.Example
 
             Employee emp = JsonConvert.DeserializeObject<Employee>(tbJson3.Text);
             MessageBox.Show("Birthday = " + emp.EmpBirthday.ToString("yyyy/MM/dd HH:mm:ss"));
+        }
+
+        private void btnSerialize4_Click(object sender, EventArgs e)
+        {
+            Employee emp = new Employee();
+            emp.EmpID = "A123";
+            emp.EmpName = "John Doe";
+            emp.EmpBirthday = DateTime.Now.AddYears(-35);
+
+            String json = System.Text.Json.JsonSerializer.Serialize(emp);
+            tbJson4.Text = json;
+        }
+
+        private void btnDeserialize4_Click(object sender, EventArgs e)
+        {
+            if (tbJson4.Text == String.Empty) { return; }
+            Employee emp = System.Text.Json.JsonSerializer.Deserialize<Employee>(tbJson4.Text);
+            MessageBox.Show("EmpName = " + emp.EmpName);
         }
     }
 }
