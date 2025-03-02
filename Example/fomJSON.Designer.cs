@@ -41,7 +41,6 @@
             this.btnDeserialize3 = new System.Windows.Forms.Button();
             this.btnSerialize3 = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.tbJson4 = new System.Windows.Forms.TextBox();
             this.btnDeserialize4 = new System.Windows.Forms.Button();
             this.btnSerialize4 = new System.Windows.Forms.Button();
@@ -139,7 +138,6 @@
             // 
             this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox3.Controls.Add(this.label1);
             this.groupBox3.Controls.Add(this.tbJson3);
             this.groupBox3.Controls.Add(this.btnDeserialize3);
             this.groupBox3.Controls.Add(this.btnSerialize3);
@@ -191,15 +189,6 @@
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "System.Text.Json";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(148, 8);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(174, 36);
-            this.label1.TabIndex = 0;
-            this.label1.Text = ".NET Standard 2.0 及更新版本\r\n.NET framework 4.6.2 及更新版本\r\n.NET Core 2.0、2.1 與 2.2";
             // 
             // tbJson4
             // 
@@ -267,7 +256,6 @@
         private System.Windows.Forms.Button btnDeserialize3;
         private System.Windows.Forms.Button btnSerialize3;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox tbJson4;
         private System.Windows.Forms.Button btnDeserialize4;
         private System.Windows.Forms.Button btnSerialize4;
