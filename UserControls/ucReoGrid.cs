@@ -552,8 +552,6 @@ namespace dotNetExample.UserControls
             }
         }
 
-
-
         /// <summary>
         /// 選取範圍異動
         /// </summary>
