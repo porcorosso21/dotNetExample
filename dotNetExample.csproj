@@ -143,6 +143,12 @@
     <Compile Include="Example\fomReoGrid.Designer.cs">
       <DependentUpon>fomReoGrid.cs</DependentUpon>
     </Compile>
+    <Compile Include="Example\fomRSA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Example\fomRSA.Designer.cs">
+      <DependentUpon>fomRSA.cs</DependentUpon>
+    </Compile>
     <Compile Include="Example\fomTask.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,6 +177,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Example\fomReoGrid.resx">
       <DependentUpon>fomReoGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Example\fomRSA.resx">
+      <DependentUpon>fomRSA.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Example\fomTask.resx">
       <DependentUpon>fomTask.cs</DependentUpon>
