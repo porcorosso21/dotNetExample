@@ -59,5 +59,15 @@ namespace dotNetExample.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   查詢類型 System.Byte[] 的當地語系化資源。
+        /// </summary>
+        internal static byte[] winform {
+            get {
+                object obj = ResourceManager.GetObject("winform", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
     }
 }
