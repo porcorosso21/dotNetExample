@@ -1,8 +1,10 @@
-﻿using System;
+﻿using Org.BouncyCastle.Asn1.X509;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
@@ -58,6 +60,32 @@ namespace dotNetExample
                 });
                 tsddbtnMenu.DropDownItems.Add(tsmi);
             }
+
+            //動態加載
+            ToolStripMenuItem tsmiwinfrom = new ToolStripMenuItem();
+            tsmiwinfrom.Margin = new Padding(0, 3, 0, 3);
+            tsmiwinfrom.Text = "動態加載winform.exe";
+            tsmiwinfrom.Click += new EventHandler((cs, ce) =>
+            {
+                string FromName = "winform";
+
+                List<Form> childrenFrom = this.MdiChildren.Where(c => c.Name == FromName).ToList();
+                if (childrenFrom.Count == 0)
+                {
+                    String Path = @"Resources\winform.exe"; //比對建置後的相對路徑
+                    Form f = (Form)Assembly.LoadFrom(Path).CreateInstance("winform.Form1"); //namesapace + class 
+                    f.Name = FromName;
+
+                    f.MdiParent = this;
+                    f.WindowState = FormWindowState.Maximized;
+                    f.Show();
+                }
+                else
+                {
+                    childrenFrom[0].BringToFront();
+                }
+            });
+            tsddbtnMenu.DropDownItems.Add(tsmiwinfrom);
         }
     }
 }
