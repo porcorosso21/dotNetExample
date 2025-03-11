@@ -1,6 +1,6 @@
 # .Net Framework Example #
 
-* MDI Child Forms
+* MDI Child Forms / Assembly.LoadFrom
 * JSON 
 * MySQL / MariaDB
 * RSA AES 加解密
